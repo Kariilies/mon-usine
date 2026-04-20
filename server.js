@@ -19,8 +19,7 @@ const dbPath = process.env.RENDER_DISK_PATH
     ? `${process.env.RENDER_DISK_PATH}/gestion_pro_v2.db` 
     : './gestion_pro_v2.db';
 
-const db = new sqlite3.Database(dbPath);// ========================================================
-// 1. INITIALISATION (BASE DE DONNÉES)
+const db = new sqlite3.Database('/tmp/gestion_pro_v2.db');// 1. INITIALISATION (BASE DE DONNÉES)
 // ========================================================
 db.serialize(() => {
   db.run(
